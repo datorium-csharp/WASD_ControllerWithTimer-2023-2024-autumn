@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace WASD_ControllerWithTimer_2023_2024_autumn
 {
     public partial class Form1 : Form
@@ -11,7 +13,19 @@ namespace WASD_ControllerWithTimer_2023_2024_autumn
         {
             InitializeComponent();
             InitializeTimer();
+            InitializeGame();
         }
+
+        private void InitializeGame()
+        {
+            var image = (Image)Properties.Resources.ResourceManager.GetObject("rocket_off_000");
+            hero.BackColor = Color.Transparent;
+            hero.Image = image;
+            hero.SizeMode = PictureBoxSizeMode.StretchImage;
+            hero.Width = 60;
+            hero.Height = 100;
+        }
+
 
         private void InitializeTimer()
         {
