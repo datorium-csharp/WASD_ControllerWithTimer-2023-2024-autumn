@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.hero = new System.Windows.Forms.PictureBox();
             this.timerMain = new System.Windows.Forms.Timer(this.components);
+            this.timerRocket = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.hero)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +49,10 @@
             // 
             this.timerMain.Interval = 50;
             this.timerMain.Tick += new System.EventHandler(this.timerMain_Tick);
+            // 
+            // timerRocket
+            // 
+            this.timerRocket.Tick += new System.EventHandler(this.timerRocket_Tick);
             // 
             // Form1
             // 
@@ -71,5 +76,6 @@
 
         private PictureBox hero;
         private System.Windows.Forms.Timer timerMain;
+        private System.Windows.Forms.Timer timerRocket;
     }
 }
