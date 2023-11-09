@@ -115,10 +115,12 @@ namespace WASD_ControllerWithTimer_2023_2024_autumn
                 if(rocketOnOff == "off")
                 {
                     rocketOnOff = "on";
+                    timerMain.Interval = 5;
                 }
                 else
                 {
                     rocketOnOff = "off";
+                    timerMain.Interval = 30;
                 }
             }
         }
